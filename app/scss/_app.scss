@@ -634,20 +634,50 @@
 		}
 	}
 
-	&__img-wrap {
+	&__img-left {
 		position: relative;
+		min-height: 420px;
+		width: 60%;
 
 		@media (min-width: 768px) {
-			position: static;
-			background-image: url('../images/feedback-founder1.png');
 			width: 100%;
-			height: 100%;
-			position: absolute;
-			min-height: 914px;
-			top: -28%;
-			background-repeat: no-repeat;
-			background-position: 110%;
-			z-index: 2;	
+		}
+	}
+
+	&__img-wrap {
+		position: absolute;
+		box-shadow: 0 0 20px 0 rgba( #000000, .2);
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 50%;
+		right: 0;
+
+		@media (min-width: 768px) {
+			width: 650px;
+			height: 650px;
+			right: 32px;
+			top: -16%;
+
+			@media (min-width: 1200px) {
+				width: 900px;
+				height: 900px;
+				top: -28%;
+			}
+		}
+
+		.img-desktop {
+			margin: -15% 40px;
+
+			@media (min-width: 450px) {
+				margin: -15% auto;
+			}
+
+			@media (min-width: 768px) {
+				margin: -20% auto;
+				width: 100%;
+			}
 		}
 
 		.img-mobile {
@@ -1097,10 +1127,17 @@
 			line-height: 24px;
 		}
 	}
-}
-  
-.active, .accordion:hover {
-	background-color: #ccc;
+
+	&.active {
+		
+		.accordion--text::before {
+			content: '-';
+		}
+	}
+
+	&:hover {
+		background-color: #ccc;
+	}
 }
   
 .panel {
