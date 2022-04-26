@@ -197,7 +197,8 @@
     display: none;
 
     @media (min-width: 768px) {
-      display: block;
+		width: 100%;
+		display: block;
     }
   }
 
